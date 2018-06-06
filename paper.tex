@@ -60,9 +60,11 @@
 
 
 % The default list of authors is too long for headers.
-%\renewcommand{\shortauthors}{R. Chamberlain et al.}
-\renewcommand{\shortauthors}{Anonymous for review}
+\renewcommand{\shortauthors}{R. D. Chamberlain et al.}
+%\renewcommand{\shortauthors}{Anonymous for review}
 
+%for comments
+\newcommand{\FIXME}[1]{\textcolor{red}{FIXME: #1}}
 
 \begin{abstract}
 Abstract text goes here.
@@ -98,8 +100,10 @@ Abstract text goes here.
 \maketitle
 
 \input{intro}
-%\input{mirror}
-%\input{mdp}
+\input{topics}
+\input{delivery}
+\input{weeks}
+\input{lessons}
 %\input{conclude}
 
 \bibliographystyle{ACM-Reference-Format}

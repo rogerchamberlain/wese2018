@@ -3,7 +3,7 @@ default: paper.pdf
 
 all: paper.pdf
 
-paper.dvi: paper.tex paper.bib intro.tex
+paper.dvi: paper.tex paper.bib intro.tex topics.tex delivery.tex weeks.tex lessons.tex
 	latex paper
 	bibtex paper
 	latex paper
