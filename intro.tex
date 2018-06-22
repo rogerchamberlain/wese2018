@@ -13,13 +13,56 @@ and that a new course should be developed with a focus on how computers
 interact with the physical world.
 The new course was offered concurrently with the previous course in the
 fall of 2015, and has been offered every semester since.
+It is required for all computer science and computer engineering minors,
+and is available as a technical elective to computer science minors (the
+department does not offer a computer engineering minor) and electrical
+engineering majors.
 
 This paper describes that course: what we teach, how we teach it, and
 what we have learned in the process.
-\FIXME{Describe the highlights, including the core intellectual material,
-the Arduino execution platform (which has a big hobbiest community),
-the fact that it is studio-based, and a mention of the text~\cite{cc17},
-contrasting with educational material with a hobbiest bent.}
+The inspiration is that there is significant material that are core
+computer science and computer engineering concepts which are well motivated
+by the needs of computers as they interact with the physical world.
+These include concepts such as information representation (e.g., digital inputs
+and outputs represented at the bit level, analog input and output values as
+non-negative binary integers with a given range),
+timing (when something happens is a functional property of the program),
+automata models (finite-state machines), etc.
+
+The course is lecture-free, with students meeting twice a week in the
+instructional laboratories.  One meeting per week is studio, in which the
+students perform guided exercises aimed at the intellectual material we
+expect them to master, and the other meeting is to work on assignments
+that will be graded for assessment purposes.
+
+The execution platforms used are built around the Arduino Uno~\cite{arduino},
+which has an 8-bit AVR microcontroller as the processor,
+and a traditional desktop (or laptop) machine that the
+students program using Java (with the Eclipse IDE~\cite{eclipse}).
+There are two specific advantages to using the Arduino platform.
+First, it has a huge following in the maker/hobbyist community, which
+is highly motivational for the students.  We regularly point them to
+follow-on opportunities for extra-curricular projects.
+Second, the simple 8-bit microcontroller at its core is conducive to
+learning basic computer architecture and machine/assembly language
+(which we include in the course as an additional core computer
+science and engineering concept worthy of exposure in the first year).
+
+There is an advantage to using Java with Eclipse as well. That is the
+development environment the students use in the first semester course, so
+it is familiar to them already as they enter.  This decreases the chance
+of cognitive overload on purely logistical subjects, the Eclipse environment
+is familiar, the Arduino development environment is very simple, the
+Java language is familiar, and the Arduino C subset is quite close to
+Java syntactically.
+
+While there are a plethora of texts available within the Arduino
+ecosystem, they are primarily targeting (and therefore better suited for)
+the hobbyist community. Since
+our course is intended to focus on core concepts, using the
+Arduino platform for illustration and experimentation, we have authored
+a text~\cite{cc17} for use with the course (which has the obvious
+advantage of being well matched to the course goals).
 
 The resulting course is well suited to the (admittedly differing) needs of
 both computer science and computer
@@ -43,7 +86,7 @@ We believe that an early (first-year) introduction to the core concepts
 introduced in this course is well deserved.
 
 The organization of the paper is as follows.  Section~\ref{sec:topics}
-articulates the intellectial material that we hope to impart on the
+articulates the intellectual material that we hope to impart on the
 students.  
 Section~\ref{sec:delivery} describes the educational approach used,
 which is a member of the active learning family.
@@ -51,4 +94,4 @@ Section~\ref{sec:weeks} provides a brief syllabus, and
 Section~\ref{sec:lessons} describes what we have learned as the course
 was developed and taught over the course of seven semesters.
 Section~\ref{sec:conclude} concludes and describes ideas we intend
-to incorporate into future offerints of the course.
+to incorporate into future offerings of the course.
