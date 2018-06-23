@@ -41,7 +41,16 @@ at which point they have a complete soft real-time system.
 This is combined with analog inputs (including the conversion of raw A/D
 input values into engineering units) and simple filtering (averaging).
 
-\emph{Computer Communications} (2 weeks) -- Protocol design.
+\emph{Computer Communications} (2 weeks) --
+This pair of modules investigates the issues inherent in using a byte stream
+to communicate between two dissimilar computer systems (the Arduino using C
+and the desktop PC using Java).  Students explore how
+to serialize multi-byte data types, design protocols that enable synchronization
+in the face of dropped bytes (e.g., using a magic number as a message header),
+and design finite-state machine recognizers to parse incoming messages.
+An illustrative example is the exploration of strings on the two execution
+platforms and in the messaging protocol (one-byte vs.~two-byte characters,
+null termination vs. character count).
 
 \emph{Multiplexing} -- Pixel-based displays.
 
