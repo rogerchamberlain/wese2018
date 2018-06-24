@@ -39,7 +39,8 @@ that blocks and returns after a specified time), they progress to delta
 timing (checking each loop to determine if the desired time has elapsed),
 at which point they have a complete soft real-time system.
 This is combined with analog inputs (including the conversion of raw A/D
-input values into engineering units) and simple filtering (averaging).
+input values into engineering units) and simple filtering (averaging),
+utilizing a temperature probe that provides a 10~mv/$^\circ$C response.
 
 \emph{Computer Communications} (2 weeks) --
 This pair of modules investigates the issues inherent in using a byte stream
@@ -52,9 +53,23 @@ An illustrative example is the exploration of strings on the two execution
 platforms and in the messaging protocol (one-byte vs.~two-byte characters,
 null termination vs. character count).
 
-\emph{Multiplexing} -- Pixel-based displays.
+\emph{Multiplexing} -- 
+This module introduces the concept of time-division multiplexing, asking the
+students to interface to and author the software to drive a 5 by 7 pixel
+LED display. Real-time computing concepts are reinforced, and students
+are introduced to the fundamental mechanisms involved in larger, more
+sophisticated, pixed-based displays (e.g., font design, time multiplexing).
 
-\emph{Integrative Project} -- Acceleration. Pedometer. Predator-prey game.
+\emph{Integrative Project} --
+In this module the students design and implement an integrative project
+that seeks to reinforce concepts that have been introduced earlier in the
+semester.  A second analog sensor is made available (an accelerometer)
+for the project.
+Different projects have been used in different semesters, including
+the development of a pedometer (mimicking a health monitor when paired
+with the temerature sensor) and a predator-prey game (that uses the
+accelerometer to sense the tilt of the microcontroller, one of the two
+game player's input mechanisms).
 
 \emph{Computer Architecture / Assembly Language} (3 weeks) -- 
 This three week set of modules has an introduction to basic computer
