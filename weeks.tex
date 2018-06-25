@@ -42,7 +42,7 @@ This is combined with analog inputs (including the conversion of raw A/D
 input values into engineering units) and simple filtering (averaging),
 utilizing a temperature probe that provides a 10~mv/$^\circ$C response.
 
-\emph{Computer Communications} (Modules D,E) (2 weeks) --
+\emph{Communications} (Modules D,E) (2 weeks) --
 This pair of modules investigates the issues inherent in using a byte stream
 to communicate between two dissimilar computer systems (the Arduino using C
 and the desktop PC using Java).  Students explore how
@@ -93,25 +93,42 @@ coverage that comes later (e.g., in their computer architecture course).
 The relationship between intellectual topics and individual modules is
 shown in Table~\ref{tbl:topics}. The columns in the table represent
 modules, and the rows represent topics.
+There is some overlap between topic names and module labels; however, that
+typically implies that the specific topic is central to the module of the
+same name, that that it is the only topic present in the module.
 
 \begin{table}[ht]
 \caption{Relationship between intellectual topics and modules.}
 \label{tbl:topics}
 \centering
 \begin{tabular}{l | c | c | c | c | c | c | c}
-$\downarrow$ Topic \ Module $\rightarrow$ & A & B & C & D,E & F & G & H,I,J \\ \hline
+Topic $\Downarrow$ \ \ \ Module $\Rightarrow$ & A & B & C & D,E & F & G & H,I,J \\ \hline
 Information & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ \\
-    representation & & & & & & &\\ \hline
-FSMs & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & & & \\ \hline
-Timing & & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ & \\ \hline
-Physical I/O & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & \\ \hline
+    Representation (\textsection\ref{sec:ip}) & & & & & & &\\ \hline
+FSMs (\textsection\ref{sec:fsm}) & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & & & \\ \hline
+Timing (\textsection\ref{sec:time}) & & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ & \\ \hline
+Physical I/O (\textsection\ref{sec:pio}) & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & \\ \hline
 Processing & & & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
-    input signals & & & & & & &\\ \hline
-User I/O & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & \\ \hline
-Computer & & & $\blacksquare$ & & & $\blacksquare$ & \\
-    communications & & & & & & &\\ \hline
+    Input Signals (\textsection\ref{sec:pis}) & & & & & & &\\ \hline
+User I/O (\textsection\ref{sec:uio}) & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & \\ \hline
+Communications (\textsection\ref{sec:comm}) & & & & $\blacksquare$ & & $\blacksquare$ & \\ \hline
 Architecture / & & & & & & & $\blacksquare$ \\
-    assembly language & & & & & & & \\
+    Assembly Lang. (\textsection\ref{sec:arch}) & & & & & & & \\
+\end{tabular}
+\centerline{\mbox{\ }}
+\centerline{{\Large Time $\longrightarrow$}}
+\centerline{\mbox{\ }}
+\centerline{Module Legend}
+\centering
+\begin{tabular}{c | l }
+Module & Name \\ \hline
+A & Information Representation \\ 
+B & Microcontroller Platform \\ 
+C & Real-Time Computing \\ 
+D,E & Communications \\
+F & Multiplexing \\
+G & Integrative Project \\
+H,I,J & Computer Arch. / Assembly Lang.
 \end{tabular}
 \end{table}
 
