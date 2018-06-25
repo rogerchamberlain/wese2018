@@ -14,7 +14,7 @@ The available modules
 (both in use currently and developed in previous semesters but not
 currently in use) are described below.
 
-\emph{Information Representation} --
+\emph{Information Representation} (Module A) --
 The intellectual content for this module is centered around understanding
 how information is represented in digital systems. This includes binary and
 hexadecimal conversions, integer
@@ -26,13 +26,13 @@ All of the above concepts are reinforced multiple times over the course
 of the semester, mastery is definitely not expected with only one week
 of exposure.
 
-\emph{Microcontroller Platform} --
+\emph{Microcontroller Platform} (Module B) --
 The content for this module includes how to physically implement electrical
 circuits, a brief introduction to electricity (a physics course is not a
 prerequisite) and voltage, digital inputs and outputs, and finite-state
 machine design.
 
-\emph{Real-Time Computing} --
+\emph{Real-Time Computing} (Module C) --
 This module's content includes techniques for including time as a functional
 element in software. Starting with delay-based timing (calling a routine
 that blocks and returns after a specified time), they progress to delta
@@ -42,7 +42,7 @@ This is combined with analog inputs (including the conversion of raw A/D
 input values into engineering units) and simple filtering (averaging),
 utilizing a temperature probe that provides a 10~mv/$^\circ$C response.
 
-\emph{Computer Communications} (2 weeks) --
+\emph{Computer Communications} (Modules D,E) (2 weeks) --
 This pair of modules investigates the issues inherent in using a byte stream
 to communicate between two dissimilar computer systems (the Arduino using C
 and the desktop PC using Java).  Students explore how
@@ -53,14 +53,14 @@ An illustrative example is the exploration of strings on the two execution
 platforms and in the messaging protocol (one-byte vs.~two-byte characters,
 null termination vs. character count).
 
-\emph{Multiplexing} -- 
+\emph{Multiplexing} (Module F) -- 
 This module introduces the concept of time-division multiplexing, asking the
 students to interface to and author the software to drive a 5 by 7 pixel
 LED display. Real-time computing concepts are reinforced, and students
 are introduced to the fundamental mechanisms involved in larger, more
 sophisticated, pixed-based displays (e.g., font design, time multiplexing).
 
-\emph{Integrative Project} --
+\emph{Integrative Project} (Module G) --
 In this module the students design and implement an integrative project
 that seeks to reinforce concepts that have been introduced earlier in the
 semester.  A second analog sensor is made available (an accelerometer)
@@ -71,7 +71,7 @@ with the temerature sensor) and a predator-prey game (that uses the
 accelerometer to sense the tilt of the microcontroller, one of the two
 game player's input mechanisms).
 
-\emph{Computer Architecture / Assembly Language} (3 weeks) -- 
+\emph{Computer Architecture / Assembly Language} (Modules H,I,J) (3 weeks) -- 
 This three week set of modules has an introduction to basic computer
 architecture (what is a fetch-execute engine) and machine language, and then
 focuses on assembly language, using the simple, 8-bit AVR instruction set.
@@ -89,6 +89,31 @@ sophisticated assembly language programmers by any means.  The motivation
 is primarily to ensure the computer science students have been exposed,
 and the computer engineering students are better prepared for the deeper
 coverage that comes later (e.g., in their computer architecture course).
+
+The relationship between intellectual topics and individual modules is
+shown in Table~\ref{tbl:topics}. The columns in the table represent
+modules, and the rows represent topics.
+
+\begin{table}[ht]
+\caption{Relationship between intellectual topics and modules.}
+\label{tbl:topics}
+\centering
+\begin{tabular}{l | c | c | c | c | c | c | c}
+$\downarrow$ Topic \ Module $\rightarrow$ & A & B & C & D,E & F & G & H,I,J \\ \hline
+Information & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ \\
+    representation & & & & & & &\\ \hline
+FSMs & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & & & \\ \hline
+Timing & & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ & \\ \hline
+Physical I/O & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & \\ \hline
+Processing & & & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+    input signals & & & & & & &\\ \hline
+User I/O & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & \\ \hline
+Computer & & & $\blacksquare$ & & & $\blacksquare$ & \\
+    communications & & & & & & &\\ \hline
+Architecture / & & & & & & & $\blacksquare$ \\
+    assembly language & & & & & & & \\
+\end{tabular}
+\end{table}
 
 In addition to the modules described above, there are a few modules that
 have been developed and used in previous semesters, but are not in current use.
