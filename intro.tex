@@ -1,97 +1,26 @@
 \section{Introduction}
 \label{sec:intro}
 
-In the spring of 2015, the Dept.~of Computer Science and Engineering at
-Washington University in St.~Louis decided to make a significant change
-in its first-year course sequence for both computer science and
-computer engineering majors.  While the first course follows, reasonably
-closely, the CS1 curriculum from the ACM/IEEE~\cite{cs13}, our second semester
-first-year course had a focus on thread-based parallelism.  The faculty
-had collectively decided that the material in that course should be moved
-to a later year (it is now offered as a sophomore-level technical elective),
-and that a new course should be developed with a focus on how computers
-interact with the physical world.
-The new course was offered concurrently with the previous course in the
-fall of 2015, and has been offered every semester since.
-It is required for all computer science and computer engineering majors,
-and is available as a technical elective to computer science minors (the
-department does not offer a computer engineering minor) and electrical
-engineering majors.
+In the spring of 2015 the Dept.~of Computer Science and Engineering at Washington University in St.~Louis decided to change the core introductory course sequence, which is required of computer science and computer engineering majors.  Historically the core  consisted of two courses: an introductory programming that corresponds to ACM/IEEE~\cite{cs13} Computer Science curricular guidelines and a subsequent course on concurrency.  The change was motivated by two factors:
+\begin{enumerate}
+  \item topics in concurrency may be more appropriate for a more mature audience, such as sophomores who may have more programming experience and
+  \item the faculty wanted to introduce significant concepts in embedded and cyber-physical systems (CPS) early enough in the curriculum for students to be able to pursue additional depth courses in these areas.
+\end{enumerate}
 
-This paper describes that course: what we teach, how we teach it, and
-what we have learned in the process.
-The inspiration is that there is significant material that are core
-computer science and computer engineering concepts which are well motivated
-by the needs of computers as they interact with the physical world.
-These include concepts such as information representation (e.g., digital inputs
-and outputs represented at the bit level, analog input and output values as
-non-negative binary integers with a given range),
-timing (\emph{when} something happens as a functional property),
-automata models (finite-state machines), etc.
+% TODO: BSIEVER: Fact-check;  Is the concurrency course optional for majors/minors?
+Consequently, the course in concurrency was changed to an elective course and a new required course was added to the core.  This new course, which can also be taken as a technical elective by computer science minors and electrical engineering majors, was first offered in the fall of 2015.  It fully displaced the prior requirement in the spring of 2016 and has been offered regularly since.  In order to engage this audience, the course uses a flipped classroom, with the majority of contact time spent in studio-based active learning.
 
-The course is lecture-free, with students meeting twice a week in the
-instructional laboratories.  One meeting per week is studio, in which the
-students perform guided exercises aimed at the intellectual material we
-expect them to master, and the other meeting is to work on assignments
-that will be graded for assessment purposes.
+Unlike many introductory courses on embedded systems, which are upper-division courses typically taken during the junior or senior year, this course is designed to be a first-year course, accessible to students after only one semester of introductory computer science.  Due to the proliferation of embedded systems, we believe that an early (first-year) introduction to the core concepts in embedded systems is well deserved.
 
-The execution platforms we use are built around the Arduino Uno~\cite{arduino},
-which has an 8-bit AVR microcontroller as the processor,
-and a traditional desktop (or laptop) machine that the
-students program using Java (with the Eclipse IDE~\cite{eclipse}).
-There are two specific advantages to using the Arduino platform.
-First, it has a huge following in the maker/hobbyist community, which
-is highly motivational for the students.  We regularly point them to
-follow-on opportunities for extra-curricular projects.
-Second, the simple 8-bit microcontroller at its core is conducive to
-learning basic computer architecture and machine/assembly language
-(which we include in the course as an additional core computer
-science and engineering concept worthy of exposure in the first year).
+The content of the resulting course is well suited to the differing needs of both computer science and computer engineering students.  We believe it is well positioned as an important course for any students who wish to be well educated in cyber-physical systems, independent of major. Moreover, we hope that it may help students discover that they want to be computer engineers early in the curriculum. Finally, the subject matter is part of the foundational material described in the National Academies' report on cyber-physical systems education~\cite{nasem16}.
+% TODO: BSIEVER: Fact-check the "foudnational material" quote above.
 
-There is an advantage to using Java with Eclipse as well. That is the
-development environment the students use in the first semester course, so
-it is familiar to them already as they enter.  This decreases the chance
-of cognitive overload on purely logistical subjects, the Eclipse environment
-is familiar, the Arduino development environment is very simple, the
-Java language is familiar, and the Arduino C subset is quite close to
-Java syntactically.
+This paper describes this course: the content, pedagogical approach, and lessons learned.  The paper is organized as follows: Section~\ref{sec:topics} articulates the intellectual material that we hope to impart on the students. Section~\ref{sec:delivery} describes the environment, audience, educational approach used. Section~\ref{sec:weeks} provides a brief syllabus, and Section~\ref{sec:lessons} describes what we have learned as the course was developed and taught over the course of seven semesters. Section~\ref{sec:conclude} concludes and describes ideas we intend to incorporate into future offerings of the course.
 
-While there are a plethora of texts available within the Arduino
-ecosystem, they are primarily targeting (and therefore better suited for)
-the hobbyist community. Since
-our course is intended to focus on core concepts, using the
-Arduino platform for illustration and experimentation, we have authored
-a text~\cite{cc17} for use with the course (which has the obvious
-advantage of being well matched to the course goals).
 
-The resulting course is well suited to the (admittedly differing) needs of
-both computer science and computer
-engineering students (e.g., we believe it is helping students discover
-that they want to be computer engineers when they come into the course
-not really knowing what computer engineering is).
-In addition, we believe it is well positioned as an important course for
-any student who wishes to be well educated in cyber-physical systems,
-independent of major.
-The subject matter is central to the National Academies' report on
-cyber-physical systems education~\cite{nasem16}.
 
-Unlike many introductory courses on embedded systems, which are upper-division
-courses typically taken during the junior or senior year, this course is
-designed to be a first-year course, accessible to students after only
-one semester of introductory computer science.  With the proliferation of
-computing well beyond the desktop and the server room, the sheer numbers
-of computers that interact with the physical world are growing and
-will continue to grow.
-We believe that an early (first-year) introduction to the core concepts
-introduced in this course is well deserved.
 
-The organization of the paper is as follows.  Section~\ref{sec:topics}
-articulates the intellectual material that we hope to impart on the
-students.  
-Section~\ref{sec:delivery} describes the educational approach used,
-which is a member of the active learning family.
-Section~\ref{sec:weeks} provides a brief syllabus, and
-Section~\ref{sec:lessons} describes what we have learned as the course
-was developed and taught over the course of seven semesters.
-Section~\ref{sec:conclude} concludes and describes ideas we intend
-to incorporate into future offerings of the course.
+
+
+
+%   Non-intro / introduce
