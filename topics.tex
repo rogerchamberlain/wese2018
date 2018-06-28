@@ -1,38 +1,68 @@
 \section{Intellectual Content}
 \label{sec:topics}
 
-While the course is aimed at first-year students, it is not intended to be a survey course.  It provides both exposure to a variety of concepts in embedded and CPS as well as requiring mastery of many concepts.  Below we describe what intellectual topics we cover in the course and also articulate the level of understanding we aim for the students to achieve.
+While the course is aimed at first-year students, it is not intended to be a survey course.  It provides both exposure to and mastery of a variety of concepts in embedded and CPS, which are also significant components of the ACM's Computer Science and Computer Engineering curriculums \cite{cs13, ce16}.  Below we describe what intellectual topics we cover in the course.  Items marked with an astrisk ($^*$)   indicate topics that students are expected to have significant mastery of while non-marked items indicate concepts with lesser depth.
 
 \subsection{Information Representation} --
 \label{sec:ip}
+The course covers fundamental concepts in information representation:
+\begin{itemize}
+  \item Integer Representations: Both unsigned$^*$ and Twos compliment$^*$
+  \item Non-Integer Numbers: Fixed point and IEEE-754 Floating Point
+  \item Character Representations: ASCII$^*$ and Unicode
+  \item Character strings, both as objects and as null-terminated C-style strings
+  \item Use of fields in binary representations (as in Floating Point)
+  \item Bitwise operations$^*$
+  \item Arrays and memory organization
+  \item Representation of real-world values as voltages that require conversion to a more appropriate unit (e.g., voltage to a temperature)$^*$
+\end{itemize}
 
 \subsection{Finite-State Machines} --
 \label{sec:fsm}
+Moore style finite state machines$^*$ are a fundamental component of multiple assignments.
 
-\subsection{Timing} --
+\subsection{Timing and Events} --
+\label{sec:time}
+The course introduces the concept of computation time in multiple ways:
+\begin{itemize}
+  \item Using delays in execution (or sleep) to control time-based behavior of devices$^*$
+  \item Using delta timing techniques to maintain either a fixed period between actions or fixed rate of actions (assuming a feasible schedule)$^*$
+  \item Using time-division multiplexing of a shared signal line
+  \item The basic structure of an event loop for event-driven programming$^*$
+\end{itemize}
+
+\subsection{Programming Concepts} --
 \label{sec:time}
 
-\subsection{Physical I/O} --
+APIs (display)
+
+\subsection{Physical I/O and Circuits Principles} --
 \label{sec:pio}
-
-\subsection{Processing of Input Signals} --
-\label{sec:pis}
-
-\subsection{User I/O} --
-\label{sec:uio}
+\begin{itemize}
+  \item Physical buttons and the concept of ``bounce'' on real digital inputs$^*$
+  \item Analog voltages and digitization of voltages (ADC)
+  \item Pulse Width Modulation
+  \item Ohm's Law and current constraints/current limiting$^*$
+  \item Challenges of noisy data (e.g., step detection in accelerometer data)$^*$
+  \item
+\end{itemize}
 
 \subsection{Communications} --
 \label{sec:comm}
+\begin{itemize}
+  \item Serial data exchanges$^*$
+  \item Non-blocking communication$^*$
+  \item Byte-ordering concerns when exchanging multi-byte entities$^*$
+  \item Basic protocols and the exchange of tagged records$^*$
+\end{itemize}
 
 \subsection{Architecture / Assembly Language} --
 \label{sec:arch}
-
-
-% TODO: BSIEVER: Interrupts
-
-\FIXME{Information representation, timing, I/O (both analog and digital,
-turning raw inputs into useful information), user I/O (keyboard and screen),
-finite-state machines,
-computer to computer communication (including protocol design),
-introduction to simple computer architecture and
-machine/assembly language.}
+\begin{itemize}
+  \item Assembly language for integer arithmatic$^*$
+  \item Registers and register conventions$^*$
+  \item Function call/use protocols$^*$
+  \item Stack use conventions$^*$
+  \item Memory organization$^*$
+  \item C-style memory segmentation (Stack, Heap, and Text segments)
+\end{itemize}
