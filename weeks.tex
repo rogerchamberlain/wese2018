@@ -10,9 +10,7 @@ Also, the first laboratory meeting (labeled studio 0) is used to familiarize
 the students with various logistics, such as the development environment
 (both Eclipse~\cite{eclipse} and Arduino IDE~\cite{arduino}),
 the code repository, etc.
-The available modules
-(both in use currently and developed in previous semesters but not
-currently in use) are described below.
+The modules are described below.
 
 \emph{Information Representation} (Module A) --
 The intellectual content for this module is centered around understanding
@@ -22,9 +20,9 @@ number representations (including 2's complement), as well as
 ASCII and UTF text.
 Students are also introduced to the finite-state machine abstraction,
 and how to implement a finite-state machine in software.
-All of the above concepts are reinforced multiple times over the course
-of the semester, mastery is definitely not expected with only one week
-of exposure.
+%All of the above concepts are reinforced multiple times over the course
+%of the semester, mastery is definitely not expected with only one week
+%of exposure.
 
 \emph{Microcontroller Platform} (Module B) --
 The content for this module includes how to physically implement electrical
@@ -34,10 +32,8 @@ machine design.
 
 \emph{Real-Time Computing} (Module C) --
 This module's content includes techniques for including time as a functional
-element in software. Starting with delay-based timing (calling a routine
-that blocks and returns after a specified time), they progress to delta
-timing (checking each loop to determine if the desired time has elapsed),
-at which point they have a complete soft real-time system.
+element in software. Starting with delay-based timing, they progress to delta
+timing (checking each loop to determine if the desired time has elapsed).
 This is combined with analog inputs (including the conversion of raw A/D
 input values into engineering units) and simple filtering (averaging),
 utilizing a temperature probe that provides a 10~mv/$^\circ$C response.
@@ -47,11 +43,8 @@ This pair of modules investigates the issues inherent in using a byte stream
 to communicate between two dissimilar computer systems (the Arduino using C
 and the desktop PC using Java).  Students explore how
 to serialize multi-byte data types, design protocols that enable synchronization
-in the face of dropped bytes (e.g., using a magic number as a message header),
+in the face of dropped bytes,
 and design finite-state machine recognizers to parse incoming messages.
-An illustrative example is the exploration of strings on the two execution
-platforms and in the messaging protocol (one-byte vs.~two-byte characters,
-null termination vs. character count).
 
 \emph{Multiplexing} (Module F) --
 This module introduces the concept of time-division multiplexing, asking the
@@ -66,69 +59,57 @@ that seeks to reinforce concepts that have been introduced earlier in the
 semester.  A second analog sensor is made available (an accelerometer)
 for the project.
 Different projects have been used in different semesters, including
-the development of a pedometer (mimicking a health monitor when paired
-with the temerature sensor) and a predator-prey game (that uses the
-accelerometer to sense the tilt of the microcontroller, one of the two
-game player's input mechanisms).
+the development of a pedometer and a predator-prey game (using the
+accelerometer to sense the tilt of the microcontroller).
 
 \emph{Computer Architecture / Assembly Language} (Modules H,I,J) (3 weeks) --
 This three week set of modules has an introduction to basic computer
 architecture (what is a fetch-execute engine) and machine language, and then
 focuses on assembly language, using the simple, 8-bit AVR instruction set.
 The first week concentrates on data representation (especially multi-byte
-data), data movement, and data manipulation
-(e.g., how to perform 16-bit addition by using two 8-bit add instructions,
-understanding the need for a carry bit).
-The second week introduces more general forms of program control, for example,
-the assembly language techniques for implementing if-then-else logic
-and loop structures.
-The third week incorporates memory more substantially, covering pointers
-and array access.
-At the end of these three modules, students are not expected to be
-sophisticated assembly language programmers by any means.  The motivation
-is primarily to ensure the computer science students have been exposed,
-and the computer engineering students are better prepared for the deeper
-coverage that comes later (e.g., in their computer architecture course).
+data) and data manipulation
+(e.g., understanding the need for a carry bit).
+The second week introduces techniques for implementing if-then-else logic
+and looping structures.
+The third week covers pointers and array access.
+%At the end of these three modules, students are not expected to be
+%sophisticated assembly language programmers by any means.  The motivation
+%is primarily to ensure the computer science students have been exposed,
+%and the computer engineering students are better prepared for the deeper
+%coverage that comes later (e.g., in their computer architecture course).
 
 The relationship between intellectual topics and individual modules is
 shown in Table~\ref{tbl:topics}. The columns in the table represent
 modules, and the rows represent topics.
 There is some overlap between topic names and module labels; however, that
 typically implies that the specific topic is central to the module of the
-same name, that that it is the only topic present in the module.
+same name, not that it is the only topic present in the module.
 
 \begin{table}[ht]
 \caption{Relationship between intellectual topics and modules.}
 \label{tbl:topics}
 \centering
 \begin{tabular}{l | c | c | c | c | c | c | c}
-Topic $\Downarrow$ \ \ \ Module $\Rightarrow$ & A & B & C & D,E & F & G & H,I,J \\ \hline
-Information & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ \\
-    Representation (\textsection\ref{sec:ip}) & & & & & & &\\ \hline
+Topic $\Downarrow$ \ \ \ \ \ \ \ \ Module $\Rightarrow$ & A & B & C & D,E & F & G & H,I,J \\ \hline
+Information Representation (\textsection\ref{sec:ip}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ \\ \hline
 FSMs (\textsection\ref{sec:fsm}) & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & & & \\ \hline
 Timing (\textsection\ref{sec:time}) & & $\blacksquare$ & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ & \\ \hline
 Physical I/O (\textsection\ref{sec:pio}) & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & \\ \hline
-Processing & & & $\blacksquare$ & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
-    Input Signals (\textsection\ref{sec:pio}) & & & & & & &\\ \hline
 User I/O (\textsection\ref{sec:uio}) & & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & \\ \hline
 Communications (\textsection\ref{sec:comm}) & & & & $\blacksquare$ & & $\blacksquare$ & \\ \hline
-Architecture / & & & & & & & $\blacksquare$ \\
-    Assembly Lang. (\textsection\ref{sec:arch}) & & & & & & & \\
+Architecture / Assembly Lang. (\textsection\ref{sec:arch}) & & & & & & & $\blacksquare$ \\
 \end{tabular}
 \centerline{\mbox{\ }}
-\centerline{{\Large Time $\longrightarrow$}}
+\centerline{{\large Time $\longrightarrow$}}
 \centerline{\mbox{\ }}
-\centerline{Module Legend}
+\centerline{Column Legend}
 \centering
-\begin{tabular}{c | l }
-Module & Name \\ \hline
-A & Information Representation \\
-B & Microcontroller Platform \\
-C & Real-Time Computing \\
+\begin{tabular}{c | l || c | l}
+Module & Name & Module & Name \\ \hline
+A & Information Representation & F & Multiplexing \\
+B & Microcontroller Platform & G & Integrative Project \\
+C & Real-Time Computing & H,I,J & Computer Arch. / Assembly Lang. \\
 D,E & Communications \\
-F & Multiplexing \\
-G & Integrative Project \\
-H,I,J & Computer Arch. / Assembly Lang.
 \end{tabular}
 \end{table}
 
@@ -139,8 +120,6 @@ have been developed and used in previous semesters, but are not in current use.
 Students explore how interrupts literally interrupt currently executing code.  In addition, students see how interrupts improve responsivenes to events, like button presses (which can further excerbate bouncing).
 
 \emph{IP Networking} --
-This module introduces the students to topics in networking.  IP protocols,
+This module introduces students to topics in networking.  IP protocols,
 including both TCP/IP and UDP/IP are covered, as well as domain name service
-and socket-based communications. The assignment includes an HTTP request
-to a remote server (using the desktop PC) and displaying a symbolic version
-of the response on the Arduino pixel display.
+and socket-based communications.
