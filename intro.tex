@@ -4,28 +4,26 @@
 In the spring of 2015, the Dept.~of Computer Science and Engineering at
 Washington University in St.~Louis decided to make a significant change
 in its first-year course sequence for both computer science and
-computer engineering majors.  While the first course follows, reasonably
-closely, the CS1 curriculum from the ACM/IEEE~\cite{cs13}, our second semester
+computer engineering majors.  While the first course follows
+the CS1 curriculum from the ACM/IEEE~\cite{cs13}, our second semester
 first-year course had a focus on thread-based parallelism.  The faculty
 had collectively decided that the material in that course should be moved
-to a later year (it is now offered as a sophomore-level technical elective),
-and that a new course should be developed with a focus on how computers
-interact with the physical world.
+to a later year and that a new course should be developed with a focus on 
+how computers interact with the physical world.
 The new course was offered concurrently with the previous course in the
 fall of 2015, and has been offered every semester since.
 It is required for all computer science and computer engineering majors,
-and is available as a technical elective to computer science minors (the
-department does not offer a computer engineering minor) and electrical
+and is available as a technical elective to computer science minors and electrical
 engineering majors.
 
 This paper describes that course: what we teach, how we teach it, and
 what we have learned in the process.
-The inspiration is that there is significant material that are core
+We were inspired by the significant material that are core
 computer science and computer engineering concepts which are well motivated
 by the needs of computers as they interact with the physical world.
-These include concepts such as information representation (e.g., digital inputs
+Theis includes concepts such as information representation (e.g., digital inputs
 and outputs represented at the bit level, analog input and output values as
-non-negative binary integers with a given range),
+non-negative binary integers),
 timing (\emph{when} something happens as a functional property),
 automata models (finite-state machines), etc.
 
@@ -37,28 +35,16 @@ that will be graded for assessment purposes.
 
 The execution platforms we use are built around the Arduino Uno~\cite{arduino},
 which has an 8-bit AVR microcontroller as the processor,
-and a traditional desktop (or laptop) machine that the
+and a traditional computer that the
 students program using Java (with the Eclipse IDE~\cite{eclipse}).
 There are two specific advantages to using the Arduino platform.
 First, it has a huge following in the maker/hobbyist community, which
-is highly motivational for the students.  We regularly point them to
-follow-on opportunities for extra-curricular projects.
+is highly motivational for the students. 
 Second, the simple 8-bit microcontroller at its core is conducive to
-learning basic computer architecture and machine/assembly language
-(which we include in the course as an additional core computer
-science and engineering concept worthy of exposure in the first year).
-
-There is an advantage to using Java with Eclipse as well. That is the
-development environment the students use in the first semester course, so
-it is familiar to them already as they enter.  This decreases the chance
-of cognitive overload on purely logistical subjects, the Eclipse environment
-is familiar, the Arduino development environment is very simple, the
-Java language is familiar, and the Arduino C subset is quite close to
-Java syntactically.
+learning basic computer architecture and machine/assembly language.
 
 While there are a plethora of texts available within the Arduino
-ecosystem, they are primarily targeting (and therefore better suited for)
-the hobbyist community. Since
+ecosystem, they are primarily targeting the hobbyist community. Since
 our course is intended to focus on core concepts, using the
 Arduino platform for illustration and experimentation, we have authored
 a text~\cite{cc17} for use with the course, which has the obvious
@@ -80,7 +66,7 @@ one semester of introductory computer science.  With the proliferation of
 computing well beyond the desktop and the server room, the sheer numbers
 of computers that interact with the physical world are growing and
 will continue to grow.
-We believe that an early (first-year) introduction to the core concepts
+We believe that an early introduction to the core concepts
 introduced in this course is well deserved.
 
 %The organization of the paper is as follows.  Section~\ref{sec:topics}
