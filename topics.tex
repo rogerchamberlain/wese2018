@@ -1,9 +1,7 @@
 \section{Intellectual Topics}
 \label{sec:topics}
 
-While the course is aimed at first-year students,
-it is not intended to be a survey course.
-It provides both exposure to and mastery of a variety of concepts
+The course provides both exposure to and mastery of a variety of concepts
 in embedded systems and CPS, which are also significant components
 of the ACM/IEEE
 Computer Science~\cite{cs13} and Computer Engineering~\cite{ce16} curricula.
@@ -12,62 +10,69 @@ Items marked with an astrisk ($^*$)
 indicate topics that students are expected to gain significant mastery
 while non-marked items indicate concepts with lesser depth.
 
-\subsection{Information Representation}
-\label{sec:ip}
-\begin{itemize}
-  \item Integer Representations: Both unsigned$^*$ and Twos compliment$^*$
-  \item Hexadecimal and binary representations$^*$
-  \item Non-Integer Numbers: Fixed point and IEEE-754 Floating Point
-  \item Character Representations: ASCII$^*$ and Unicode
-  \item Character strings, both as objects and as null-terminated C-style strings
+\vspace{0.1in}
+\noindent
+\begin{tabular}{r l}
+{\bf 2.1} & {\bf Information Representation} \\
+-- & Integer Representations: both unsigned$^*$ and 2's complement$^*$ \\
+-- & Hexadecimal and binary representations$^*$ \\
+-- & Non-Integer Numbers: Fixed point and IEEE-754 Floating Point \\
+-- & Character Representations: ASCII$^*$ and Unicode \\
+-- & Character strings, both as objects and as null-terminated C-style strings \\
 %  \item Use of fields in binary representations (as in Floating Point)
-  \item Bitwise operations$^*$
+-- &  Bitwise operations$^*$ \\
 %  \item Arrays and memory organization
-  \item Representation of real-world values as voltages that require conversion to a more appropriate unit (e.g., voltage to a temperature)$^*$
-\end{itemize}
+-- & Representation of real-world values as voltages that require conversion to a\\
+\  & more appropriate unit (e.g., voltage to a temperature)$^*$
+\end{tabular}
 
-\subsection{Automata}
-\label{sec:fsm}
-\begin{itemize}
-\item Moore style finite-state machines$^*$
-\end{itemize}
+\noindent
+\begin{tabular}{r l}
+{\bf 2.2} & {\bf Automata}\\
+-- & Moore style finite-state machines$^*$
+\end{tabular}
 
-\subsection{Timing and Events}
-\label{sec:time}
-\begin{itemize}
-  \item Using delays in execution (or sleep) to control time-based behavior$^*$
-  \item Using delta timing techniques to maintain either a fixed period between actions or fixed rate of actions (assuming a feasible schedule)$^*$
-  \item Using time-division multiplexing of a shared signal line
-  \item The basic structure of an event loop for event-driven programming$^*$
-\end{itemize}
+\vspace{0.1in}
+\noindent
+\begin{tabular}{r l}
+{\bf 2.3} & {\bf Timing and Events} \\
+-- & Using delays in execution (or sleep) to control time-based behavior$^*$ \\
+-- & Using delta timing techniques to maintain either a fixed period between \\
+\  & actions or fixed rate of actions (assuming a feasible schedule)$^*$ \\
+-- & Using time-division multiplexing of a shared signal line \\
+-- & The basic structure of an event loop for event-driven programming$^*$
+\end{tabular}
 
-\subsection{Circuits Principles, Physical I/O, and User I/O}
-\label{sec:pio}
-\begin{itemize}
-  \item Physical buttons and the concept of ``bounce'' on real digital inputs$^*$
-  \item Analog voltages and digitization of voltages (ADC)
-  \item Pulse Width Modulation
-  \item Ohm's Law and current constraints/current limiting$^*$
-  \item Challenges of noisy data (e.g., step detection in accelerometer data)$^*$
-  \item Pixel displays$^*$
-\end{itemize}
+\vspace{0.1in}
+\noindent
+\begin{tabular}{r l}
+{\bf 2.4} & {\bf Circuits Principles, Physical I/O, and User I/O} \\
+-- & Physical buttons and the concept of ``bounce'' on real digital inputs$^*$ \\
+-- & Analog voltages and digitization of voltages (ADC) \\
+-- & Pulse Width Modulation \\
+-- & Ohm's Law and current constraints/current limiting$^*$ \\
+-- & Challenges of noisy data (e.g., step detection in accelerometer data)$^*$ \\
+-- & Pixel displays$^*$
+\end{tabular}
 
-\subsection{Communications}
-\label{sec:comm}
-\begin{itemize}
-  \item Serial data exchanges$^*$
-  \item Non-blocking communication$^*$
-  \item Byte-ordering concerns when exchanging multi-byte entities$^*$
-  \item Basic protocols and the exchange of tagged records$^*$
-\end{itemize}
+\vspace{0.1in}
+\noindent
+\begin{tabular}{r l}
+{\bf 2.5} & {\bf Communications} \\
+-- & Serial data exchanges$^*$ \\
+-- & Non-blocking communication$^*$ \\
+-- & Byte-ordering concerns when exchanging multi-byte entities$^*$ \\
+-- & Basic protocols and the exchange of tagged records$^*$
+\end{tabular}
 
-\subsection{Architecture / Assembly Language}
-\label{sec:arch}
-\begin{itemize}
-  \item Assembly language for integer arithmatic$^*$
-  \item Registers and register conventions$^*$
-  \item Function call/use protocols$^*$
-  \item Stack use conventions$^*$
-  \item Memory organization$^*$
-  \item C-style memory segmentation (Stack, Heap, and Text segments)
-\end{itemize}
+\vspace{0.1in}
+\noindent
+\begin{tabular}{r l}
+{\bf 2.6} & {\bf Architecture / Assembly Language} \\
+-- & Assembly language for integer arithmatic$^*$ \\
+-- & Registers and register conventions$^*$ \\
+-- & Function call/use protocols$^*$ \\
+-- & Stack use conventions$^*$ \\
+-- & Memory organization$^*$ \\
+-- & C-style memory segmentation (stack, heap, and text segments)
+\end{tabular}
