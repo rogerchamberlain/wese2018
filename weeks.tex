@@ -12,30 +12,29 @@ the code repository, etc.
 The modules are described below.
 
 \emph{Information Representation} (Module A) --
-The intellectual content for this module is centered around understanding
-how information is represented in digital systems. This includes binary and
+How information is represented in digital systems, including binary and
 hexadecimal conversions, integer
 number representations (including 2's complement), as well as
 ASCII and UTF text.
-Students are also introduced to the finite-state machine abstraction,
+Introduction to the finite-state machine abstraction,
 and how to implement a finite-state machine in software.
 %All of the above concepts are reinforced multiple times over the course
 %of the semester, mastery is definitely not expected with only one week
 %of exposure.
 
 \emph{Microcontroller Platform} (Module B) --
-The content for this module includes how to physically implement electrical
+How to physically implement electrical
 circuits, a brief introduction to electricity (a physics course is not a
 prerequisite) and voltage, digital inputs and outputs, and finite-state
 machine design.
 
 \emph{Real-Time Computing} (Module C) --
-This module's content includes techniques for including time as a functional
-element in software. Starting with delay-based timing, they progress to delta
+Techniques for including time as a functional
+element in software. Starting with delay-based timing, students progress to delta
 timing (checking each loop to determine if the desired time has elapsed).
 This is combined with analog inputs (including the conversion of raw A/D
-input values into engineering units) and simple filtering (averaging),
-utilizing a temperature probe that provides a 10~mv/$^\circ$C response.
+input values into engineering units) and simple filtering (averaging).
+%utilizing a temperature probe that provides a 10~mv/$^\circ$C response.
 
 \emph{Communications} (Modules D,E) (2 weeks) --
 This pair of modules investigates the issues inherent in using a byte stream
@@ -46,14 +45,14 @@ in the face of dropped bytes,
 and design finite-state machine recognizers to parse incoming messages.
 
 \emph{Multiplexing} (Module F) --
-This module introduces the concept of time-division multiplexing, asking the
+Introduction to the concept of time-division multiplexing, asking the
 students to interface to and author the software to drive a 5 by 7 pixel
 LED display. Real-time computing concepts are reinforced, and students
 are introduced to the fundamental mechanisms involved in larger, more
 sophisticated, pixed-based displays (e.g., font design, time multiplexing).
 
 \emph{Integrative Project} (Module G) --
-In this module the students design and implement an integrative project
+Design and implemention of an integrative project
 that seeks to reinforce concepts that have been introduced earlier in the
 semester.  A second analog sensor is made available (an accelerometer)
 for the project.
@@ -63,14 +62,16 @@ accelerometer to sense the tilt of the microcontroller).
 
 \emph{Assembly Language} (Modules H,I,J) (3 weeks) --
 This three week set of modules has an introduction to basic computer
-architecture (what is a fetch-execute engine) and machine language, and then
+architecture
+% (what is a fetch-execute engine)
+and machine language, and then
 focuses on assembly language, using the simple, 8-bit instruction set.
-The first week covers data representation (especially multi-byte
+Week~1 covers data representation (especially multi-byte
 data) and data manipulation
 (e.g., understanding the need for a carry bit).
-The second week introduces techniques for implementing if-then-else logic
+Week~2 introduces techniques for implementing if-then-else logic
 and looping structures.
-The third week covers pointers and array access.
+Week~3 covers pointers and array access.
 %At the end of these three modules, students are not expected to be
 %sophisticated assembly language programmers by any means.  The motivation
 %is primarily to ensure the computer science students have been exposed,
@@ -84,7 +85,7 @@ There is some overlap between topic names and module labels; however, that
 typically implies that the specific topic is central to the module of the
 same name, not that it is the only topic present in the module.
 
-\begin{table}[ht]
+\begin{table}[t]
 \caption{Relationship between intellectual topics and modules.}
 \label{tbl:topics}
 
@@ -99,16 +100,16 @@ Circuits \& I/O (\textsection 2.4) & & $\blacksquare$ & $\blacksquare$ & $\black
 Communications (\textsection 2.5) & & & & $\blacksquare$ & & $\blacksquare$ & \\ \hline
 Architecture / Assembly Lang. (\textsection 2.6) & & & & & & & $\blacksquare$ \\
 \end{tabular}
-\centerline{\mbox{\ }}
-\centerline{Column Legend}
-\centering
-\begin{tabular}{c | l || c | l}
-Module & Name & Module & Name \\ \hline
-A & Information Representation & F & Multiplexing \\
-B & Microcontroller Platform & G & Integrative Project \\
-C & Real-Time Computing & H,I,J & Assembly Language \\
-D,E & Communications \\
-\end{tabular}
+%\centerline{\mbox{\ }}
+%\centerline{Column Legend}
+%\centering
+%\begin{tabular}{c | l || c | l}
+%Module & Name & Module & Name \\ \hline
+%A & Information Representation & F & Multiplexing \\
+%B & Microcontroller Platform & G & Integrative Project \\
+%C & Real-Time Computing & H,I,J & Assembly Language \\
+%D,E & Communications \\
+%\end{tabular}
 \end{table}
 
 In addition to the modules described above, there are a few modules that

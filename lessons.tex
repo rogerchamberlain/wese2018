@@ -1,9 +1,11 @@
-\section{Lessons Learned}
+\section{Lessons Learned%
+\protect\footnote{[Insert appropriate comment here concerning
+IRB review.]}
+}
 \label{sec:lessons}
 
-Next, we describe the lessons we have learned over the span of several
-offerings of the course\footnote{[Insert appropriate comment here concerning
-IRB review.]}.
+%Next, we describe the lessons we have learned over the span of several
+%offerings of the course
 
 \subsection{Pacing of Material}
 
@@ -27,20 +29,29 @@ For example, the networking module was (at least temporarily) retired
 and the assembly language material was converted from a
 2 week series into a 3 week series, without expanding the content.
 
-In the most recent semester's student evaluations (spring 2018),
-the results of the pace ratings are shown in Figure~\ref{fig:pace}
-(using a 7-item Likert scale).
+The results of the pace ratings for spring 2018 are shown in
+Figure~\ref{fig:pace} (using a 7-item Likert scale).
 The mean score of 5.47 (std. dev. of 1.41)
 is very close to the department's average of
 5.66, and a substantial improvement from the mean score of 4.51
 for the course in spring of 2017.
 
-\begin{figure}[ht]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.5\columnwidth]{pace}
-\caption{Student ratings of statement, ``The material was covered
+\parbox{0.48\columnwidth}{%
+   \includegraphics[width=0.47\columnwidth]{pace}
+   \caption{Student ratings of statement, ``The material was covered
 at a reasonable pace''  (scoring: 1 - Strongly Disagree, 7 - Strongly Agree).}
-\label{fig:pace}
+   \label{fig:pace}
+}
+~
+\parbox{0.48\columnwidth}{%
+   \includegraphics[width=0.47\columnwidth]{scores}
+   \caption{Relationship between overall and exam~3 scores
+with and without the extra exercise. Bars indicate mean and
+whiskers std.~err.}
+   \label{fig:scores}
+}
 \end{figure}
 
 \subsection{Analysis Problems}
@@ -72,15 +83,6 @@ variability in scores is wide enough that this result is not
 statistically significant ($p = 0.11$, non-paired data), so we cannot
 rule out the null hypothesis that the difference in the means is
 due to chance.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.5\columnwidth]{scores}
-\caption{Relationship between overall scores and exam~3 scores
-with and without the extra exercise. The bars indicate mean score and
-the whiskers indicate standard error.}
-\label{fig:scores}
-\end{figure}
 
 Our current opinion is that the correlation seen in the overall scores
 is likely due to the
